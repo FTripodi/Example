@@ -1,17 +1,20 @@
 <?php
 	$address = "609 St. Charles Ave";
-	$authors = array('Charles Dickens died in 1870','William Thackeray died in 1863','Anthony Trollope died in 1882','Gerard Manley Hopkins died in 1889');
- 	
-?>
-
+	$authors = array(
+		'1870' => 'Charles Dickens' 
+		'1863' => 'William Thackeray' 
+		'1882' => 'Anthony Trollope'
+		'1889' => 'Gerard Manley Hopkins'
+		);
+	
+	foreach ($authors as $year => $author) {echo "$author died in $year.<br/>";}
+	
 
 <html>
 <head>
 	<title>Example 1</title> 
 	<style type="text/css"> 
 	h1 {font-size: 1.8em;}
-
-
 
 	</style>
 </head>
@@ -20,10 +23,7 @@
 
 
 <p><?php echo $address; ?></p>
-<p><?php echo($authors[0]); ?></p>
-<p><?php echo($authors[1]); ?></p>
-<p><?php echo($authors[2]); ?></p>
-<p><?php echo($authors[3]); ?></p>
+<p><?php echo "$author died in $year."?></p>
 
 </body>
 </html>
